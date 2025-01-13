@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Tracking</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header">
+        <h1>Biorepository</h1>
+        <h2>beta 1.0</h2>
+      </header>
+      <main class="app-main">
+        <!-- Form Tambah Sample -->
+        <section class="card">
+          <h2>Tambah Sample</h2>
+          <form id="form-input">
+            <div class="form-group">
+              <label for="tanggal-input">Tanggal Input</label>
+              <input type="date" id="tanggal-input" name="tanggal-input" required />
+            </div>
+            <div class="form-group">
+              <label for="refco">Refco</label>
+              <input type="text" id="refco" name="refco" placeholder="Masukkan Refco" required />
+            </div>
+            <div class="form-group">
+              <label for="tangga">Tangga</label>
+              <input type="text" id="tangga" name="tangga" placeholder="Masukkan Tangga" required />
+            </div>
+            <div class="form-group">
+              <label for="rak">Rak</label>
+              <input type="text" id="rak" name="rak" placeholder="Masukkan Rak" required />
+            </div>
+            <div class="form-group">
+              <label for="kode-rak">Kode Rak</label>
+              <input type="text" id="kode-rak" name="kode-rak" placeholder="Masukkan Kode Rak" required />
+            </div>
+            <div class="form-group">
+              <label for="kode-sampel">Kode Sampel</label>
+              <input type="text" id="kode-sampel" name="kode-sampel" placeholder="Masukkan Kode Sampel" required />
+            </div>
+            <div class="form-group">
+              <label for="nama-sample">Nama Sample</label>
+              <input type="text" id="nama-sample" name="nama-sample" placeholder="Masukkan Nama Sampel" required />
+            </div>
+            <button type="button" class="btn btn-primary" id="btn-tambah">Tambah</button>
+          </form>
+        </section>
+
+        <!-- Daftar Sample -->
+        <section class="card">
+          <h2>Daftar Sample</h2>
+          <table id="table-sample">
+            <thead>
+              <tr>
+                <th>Nama Sample</th>
+                <th>Kode Sample</th>
+                <th>Tanggal Input</th>
+                <th>Tangga</th>
+                <th>Refco</th>
+                <th>Rak</th>
+                <th>Kode Rak</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-sample">
+              <!-- Data akan dimuat di sini -->
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Pencarian -->
+        <section class="card">
+          <h2>Cari Sample</h2>
+          <div class="search-bar">
+            <input type="text" id="input-pencarian" placeholder="Cari sample..." />
+            <button class="btn btn-secondary" id="btn-pencarian">Cari</button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
